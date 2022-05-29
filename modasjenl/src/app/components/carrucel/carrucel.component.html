@@ -1,0 +1,29 @@
+<!-- Swiper -->
+<div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+
+        <div class="swiper-slide" *ngFor="let producto of productos">
+
+            <div>
+                <mat-card class="cardcarrucel">
+
+                    <img src="{{ producto.imagen }}" class="" style="height: 210px;width: 165px;">
+                    <div class="titlecarrucel">
+                        <div class="subtitulocarrucel"> {{ producto.nombre }} </div>
+                        <div class="preciocarrucel">$ {{ producto.precio }}</div>
+                    </div>
+
+                </mat-card>
+
+                <button mat-raised-button color="accent" class="btnancho"><span class="material-icons">
+                                shopping_cart
+                            </span>Agregar al carrito</button>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <!-- <div class="swiper-pagination"></div> -->
+</div>

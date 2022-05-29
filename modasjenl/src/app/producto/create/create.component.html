@@ -1,0 +1,114 @@
+<div class="container">
+
+    <div>
+
+        <div class="d-flex justify-content-between">
+            <h4>Form customer</h4>
+            <a href="#" routerLink="/productos/index" class="btn btn-primaryt">Back</a>
+        </div>
+
+        <hr/>
+
+        <form [formGroup]="form" (ngSubmit)="submit()">
+
+            <div class="form-group row">
+                <div class="col-md-6 ">
+                    <label for="title">Nombre del producto:</label>
+                    <input formControlName="nombre" id="nombre" type="text" class="form-control">
+                    <div *ngIf="f.nombre.touched && f.nombre.invalid" class="alert alert-danger">
+                        <div *ngIf="f.nombre.errors.required">*Nombre es obligatorio.</div>
+                        <div *ngIf="f.nombre.errors.pattern">*El nombre solo debe contener letras.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-6 ">
+                    <label for="title">Modelo:</label>
+                    <input formControlName="modelo" id="modelo" type="text" class="form-control">
+                    <div *ngIf="f.modelo.touched && f.modelo.invalid" class="alert alert-danger">
+                        <div *ngIf="f.modelo.errors.required">*Modelo es obligatorio.</div>
+                        <div *ngIf="f.modelo.errors.pattern">*El modelo debe contener letras o numeros.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-6 ">
+                    <label for="title">Descripción:</label>
+                    <input formControlName="descripcion" id="descripcion" type="text" class="form-control">
+                    <div *ngIf="f.descripcion.touched && f.descripcion.invalid" class="alert alert-danger">
+                        <div *ngIf="f.descripcion.errors.required">*Descripcion es obligatorio.</div>
+                        <div *ngIf="f.descripcion.errors.pattern">*.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-6 ">
+                    <label for="precio">Precio:</label>
+                    <input formControlName="precio" id="precio" type="text" class="form-control">
+                    <div *ngIf="f.precio.touched && f.precio.invalid" class="alert alert-danger">
+                        <div *ngIf="f.precio.errors.required">*Precio es obligatorio.</div>
+                        <div *ngIf="f.precio.errors.pattern">*El precio solo debe contener numeros.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-6 ">
+                    <label for="title">Categoria:</label>
+                    <input formControlName="categoria" id="categoria" type="text" class="form-control">
+                    <div *ngIf="f.categoria.touched && f.categoria.invalid" class="alert alert-danger">
+                        <div *ngIf="f.categoria.errors.required">*Categoria es obligatorio.</div>
+                        <div *ngIf="f.categoria.errors.pattern">*</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="form-group row">
+          <div class="col-md-6 ">
+            <label for="title">Selecciona una imagen:</label>
+            <input
+              formControlName="imagen"
+              id="imagen"
+              type="text"
+              class="form-control">
+            <div *ngIf="f.imagen.touched && f.imagen.invalid" class="alert alert-danger">
+                <div *ngIf="f.imagen.errors.required">*Name is required.</div>
+                <div *ngIf="f.imagen.errors.pattern">*The name must only contain letters.</div>
+            </div>
+          </div>
+      </div> -->
+
+
+            <div class="form-group row">
+                <div class="col-md-6 ">
+                    <!-- in app.component.html -->
+                    <!-- <ngx-dropzone (change)="onSelect($event)">
+  <ngx-dropzone-label>Selecciona una imagen!</ngx-dropzone-label>
+
+  <ngx-dropzone-image-preview ngProjectAs="ngx-dropzone-preview" *ngFor="let f of files" 
+                          [file]="f"
+                          [multiple]="false"
+                          [removable]="true" 
+                          (removed)="onRemove(f)"
+                          accept="image/jpeg,image/jpg,image/png,image/gif"
+                         
+
+                          >
+    <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+  </ngx-dropzone-image-preview>
+
+</ngx-dropzone> -->
+
+                </div>
+            </div>
+
+
+            <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button>
+        </form>
+
+        <br><br>
+    </div>
+</div>

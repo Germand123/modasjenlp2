@@ -1,0 +1,47 @@
+<!-- <div class="row"> -->
+
+<app-navbar> </app-navbar>
+
+
+<!-- <br><br>
+  <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm fixed-top">
+  
+    <h5 class="my-0 mr-md-auto font-weight-normal">Laravel Angular JWT Auth</h5>
+    <nav class="my-2 my-md-0 mr-md-3">
+      <a class="p-2 text-dark" routerLink="/profile" *ngIf="isSignedIn">User Profile</a>
+      <a class="p-2 text-dark" *ngIf="!isSignedIn" routerLink="/login">Log in</a>
+      <a class="p-2 text-dark" routerLink="/registro">Register</a>
+    </nav>
+    <button class="btn btn-outline-primary" (click)="cerrarSesion()" *ngIf="isSignedIn">Log out</button>
+  
+  </div> -->
+
+
+<router-outlet>
+
+
+    <!-- <app-search (search)="handleSearch($event)"></app-search> -->
+
+    <!-- <ul>
+        <li *ngFor="let usuario of usuarios | search:filtro_valor "> {{usuario.name}}</li>
+      </ul>
+   -->
+
+    <!-- <app-ng7-mat-breadcrumb (config)="confifObject"></app-ng7-mat-breadcrumb>  -->
+
+
+
+</router-outlet>
+<app-chat-bot></app-chat-bot>
+<br><br><br><br><br><br><br><br><br>
+
+<app-footer></app-footer>
+<!-- breadcrumbConfig: object = {
+      bgColor: '#eee',
+      fontSize: '18px',
+      fontColor: '#0275d8',
+      lastLinkColor: '#000',
+      symbol: ' / ',
+    }; -->
+
+<!-- </div> -->

@@ -1,0 +1,63 @@
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.titlecarrucel {
+    color: rgba(0, 0, 0, .6);
+}
+
+.subtitulocarrucel {
+    padding-top: 5px;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.375rem;
+    letter-spacing: .0071428571em;
+}
+
+.preciocarrucel {
+    padding-bottom: 5px;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.25rem;
+    font-weight: 450;
+    letter-spacing: .0125em;
+    line-height: 2rem;
+    word-break: break-all;
+    margin-left: 18px;
+}
+
+.cardcarrucel {
+    padding: 0 0 0 0;
+}
+
+.btnancho {
+    width: 100%;
+}

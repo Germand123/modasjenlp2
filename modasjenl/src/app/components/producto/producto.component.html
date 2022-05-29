@@ -1,0 +1,32 @@
+
+
+<br>
+<div class="container">
+<app-ng7-mat-breadcrumb ></app-ng7-mat-breadcrumb>
+<br>
+    <section>
+        
+        <table class="table ">
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>modelo</th>
+            <th>descripcion</th>
+            <th>imagen</th>
+            <!-- <th width="220px">Action</th> -->
+          </tr>
+          <tr *ngIf="producto!=null">
+            <td>{{ producto.id }}</td>
+            <td>{{ producto.nombre }}</td>
+            <td>{{ producto.modelo }}</td>
+            <td>{{ producto.descripcion }}</td>
+            <td><img src="{{ producto.imagen }}" alt="" class="card-img-top" style="width: 5rem;"></td>
+            <td>
+              <!-- <a href="#" [routerLink]="['/productos/', 'edit', producto.id  ]" class="btn btn-primary">Edit</a>
+              <button type="button" (click)="deleteProducto(producto.id)" class="btn btn-danger">Delete</button>
+            </td> -->
+          </tr>
+        </table>
+     </section>
+    </div>
+    

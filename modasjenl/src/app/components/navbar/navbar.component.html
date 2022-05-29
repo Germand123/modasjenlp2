@@ -1,0 +1,39 @@
+<mat-toolbar color="accent" >
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span></span>
+    <span> Moda y Estilo <img src="./assets/img/logo.jpeg" alt="" class="logo"> </span > 
+      <span class="example-spacer"></span>
+      <div class="d-flex justify-content-center px-5">
+        <!-- <div class="search"> <input type="text" class="search-input" placeholder="Buscar prenda" name=""> 
+          <a href="#" class="search-icon"> <i class="fa fa-search"></i> </a> 
+        </div> -->
+    </div>
+
+    <span class="example-spacer"></span>
+    <button mat-button color="" [routerLink]="[ '/']"><span class="material-icons">
+      home
+      </span>
+      Inicio</button>
+    <button mat-button color=""  *ngIf="!logueado" [routerLink]="[ '/login']">Iniciar sesion</button>
+    <button mat-button color=""  *ngIf="!logueado" [routerLink]="[ '/registro']">Regístrate</button>
+
+    <button mat-button color="" *ngIf="logueado" [routerLink]="[ '/profile']">User Profile</button>
+
+    <button mat-button color="" [routerLink]="[ '/error400']">Error 400</button>
+    <button mat-button color="" [routerLink]="[ '/error404']">Error 404</button>
+    <button mat-button color="" [routerLink]="[ '/error500']">Error 500</button>
+
+
+    <button class="btn btn-outline-primary" (click)="cerrarSesion()" *ngIf="logueado">Log out</button>
+</mat-toolbar>
+
+
+
+<!-- <nav class="my-2 my-md-0 mr-md-3">
+  <a class="p-2 text-dark" routerLink="/profile" *ngIf="isSignedIn">User Profile</a>
+  <a class="p-2 text-dark" *ngIf="!isSignedIn" routerLink="/login">Log in</a>
+  <a class="p-2 text-dark" routerLink="/registro">Register</a>
+</nav> -->
+

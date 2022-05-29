@@ -1,0 +1,58 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-4 align-self-center text-center">
+
+
+
+            <!-- <div class="body"> -->
+
+            <!-- <div class="login"> -->
+
+            <!-- <mat-spinner class="spinner" diameter="50" color="accent"></mat-spinner> -->
+
+            <br><br>
+            <form>
+                <!-- #ngForm="ngForm" -->
+                <!-- <img src="./assets/img/user.png" alt=""   width="40%"  > -->
+                <h1>¿Que podemos hacer por ti</h1>
+
+                <mat-form-field class="ancho" appearance="fill">
+                    <mat-label>Nombre</mat-label>
+                    <input type="text" matInput autocomplete="off" formControlName="nombre">
+                    <!-- <mat-error *ngIf="frmRegistrate.get('nombre').touched && frmRegistrate.get('nombre').errors?.required"  > El nombre es obligatorio</mat-error> -->
+                </mat-form-field>
+
+
+                <mat-form-field class="ancho" appearance="fill">
+                    <mat-label>Correo</mat-label>
+                    <input type="email" matInput autocomplete="off" formControlName="email">
+
+                    <!-- <mat-error *ngIf="frmRegistrate.get('email').touched && frmRegistrate.get('email').errors?.required">  Correo obligatorio</mat-error> -->
+                </mat-form-field>
+
+
+                <mat-form-field class="ancho" appearance="fill">
+                    <mat-label>Comentario</mat-label>
+                    <input type="text" matInput autocomplete="off" formControlName="apellido">
+                    <!-- <mat-error *ngIf="frmRegistrate.get('apellido').touched && frmRegistrate.get('apellido').errors?.required" >  Apellido  obligatorio</mat-error> -->
+
+                </mat-form-field>
+
+
+
+                <!-- <mat-error class="mat-error" *ngIf="checarSiSonIguales()">Las contraseñas no coinciden</mat-error> -->
+                <br>
+                <button type="submit" class="ancho button" mat-raised-button color="accent">Enviar comentario    </button>
+
+            </form>
+
+            <!-- </div> -->
+            <br><br><br><br>
+            <!-- </div> -->
+
+        </div>
+
+        <div class="col-md-2"></div>
+        <div class="col-md-6">
+        </div>
